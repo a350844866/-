@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jt-manage-mapper:war">
+    <output-path>$PROJECT_DIR$/jt-manage/jt-manage-mapper/target</output-path>
+    <root id="archive" name="jt-manage-mapper-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jt-manage-mapper:war exploded" />
+    </root>
+  </artifact>
+</component>
