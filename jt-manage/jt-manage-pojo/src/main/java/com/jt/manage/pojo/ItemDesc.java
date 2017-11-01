@@ -2,10 +2,12 @@ package com.jt.manage.pojo;
 
 import com.jt.common.po.BasePojo;
 
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name = "tb_item_desc")
 public class ItemDesc extends BasePojo {
+    @Id
     private Long itemId;
     private String itemDesc;
 

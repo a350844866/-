@@ -22,11 +22,11 @@ import com.jt.manage.service.ItemService;
 @Controller
 @RequestMapping("/item")
 public class ItemController {
-	
-	//获取日志对象
-	private static final Logger logger = Logger.getLogger(ItemController.class);
-	
-	@Autowired
+
+    //获取日志对象
+    private static final Logger logger = Logger.getLogger(ItemController.class);
+
+    @Autowired
 	private ItemService itemService;
 	
 	@RequestMapping("/findAll")
@@ -82,8 +82,8 @@ public class ItemController {
 	public SysResult saveItem(Item item,String desc){
 		try {
 			itemService.saveItem(item,desc);
-			//System.out.println("");
-			logger.info("{商品新增成功}");  //速度更优
+//            System.out.println("");
+            logger.info("{商品新增成功}");  //速度更优
 			return SysResult.build(200, "商品新增成功");
 		} catch (Exception e) {
 			e.printStackTrace();

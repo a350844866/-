@@ -78,16 +78,17 @@ public class ItemServiceImpl implements ItemService {
 	 */
 	@Override
 	public EasyUIResult findItemList(int page, int rows) {
-		//表示开始使用分发工具
-		PageHelper.startPage(page, rows);
-		
-		//表示查询全部记录     3100     当前的查询操作,必须为之分页开始之后一行 否则报错.
-		List<Item> itemList = itemMapper.findAll();
-		System.out.println(itemList.size());
-		
-		PageInfo<Item> itemInfo = new PageInfo<Item>(itemList);
-		
-		return new EasyUIResult(itemInfo.getTotal(), itemList);
+	    //表示开始使用分页工具
+	    PageHelper.startPage(page,rows);
+
+
+	    //表示查询全部记录  3100 当前的查询操作,必须为之分页开始之后一行 否则报错
+        List<Item> itemList = itemMapper.findAll();
+
+        PageInfo<Item> itemInfo = new PageInfo<Item>(itemList);
+
+        return new EasyUIResult(itemInfo.getTotal(), itemList);
+
 	}
 	
 	
@@ -129,8 +130,8 @@ public class ItemServiceImpl implements ItemService {
 	public void updateItem(Item item,String desc) {
 		
 		item.setUpdated(new Date());
-		//全部的修改  不管是否有数据 
-		//itemMapper.updateByPrimaryKey(record)
+		//全部的修改  不管是否有数据
+        //itemMapper.updateByPrimaryKey(record)
 		
 		//动态修改
 		itemMapper.updateByPrimaryKeySelective(item);

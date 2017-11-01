@@ -9,6 +9,8 @@ import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.UpdateProvider;
 
 public interface SysMapper<T> {
+
+
 	
 	@SelectProvider(type = SysMapperProvider.class, method = "dynamicSQL")
 	public int findCount();
