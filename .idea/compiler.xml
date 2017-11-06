@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jt-common" />
         <module name="jt-manage-controller" />
         <module name="jt-manage-mapper" />
         <module name="jt-manage-pojo" />

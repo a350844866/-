@@ -25,7 +25,8 @@ public class ItemCatController {
 	public List<ItemCat> findItemCatList(@RequestParam(defaultValue="0")Long id){
 		//id号其实就是上级Id
 		return itemCatService.findItemCatList(id);
-	}
+
+    }
 	
 	
 	

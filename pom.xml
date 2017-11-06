@@ -214,6 +214,13 @@
           <version>${jedis.version}</version>
       </dependency>
 
+      <!--添加spring-datajar包  -->
+      <dependency>
+          <groupId>org.springframework.data</groupId>
+          <artifactId>spring-data-redis</artifactId>
+          <version>1.4.1.RELEASE</version>
+      </dependency>
+
 
       <!-- 字符加密、解密 -->
       <dependency>

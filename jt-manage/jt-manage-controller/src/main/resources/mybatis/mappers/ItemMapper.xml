@@ -18,7 +18,6 @@
 	
 	<update id="updateStatus">
 		update tb_item set status = #{status} where id in(
-		
 			<foreach collection="ids" item="id" separator=",">
 				#{id}
 			</foreach>
