@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/jt-manage/jt-manage-pojo/jt-manage-pojo.iml" filepath="$PROJECT_DIR$/jt-manage/jt-manage-pojo/jt-manage-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt-manage/jt-manage-service/jt-manage-service.iml" filepath="$PROJECT_DIR$/jt-manage/jt-manage-service/jt-manage-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt-parent.iml" filepath="$PROJECT_DIR$/jt-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt-sso/jt-sso.iml" filepath="$PROJECT_DIR$/jt-sso/jt-sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt-web/jt-web.iml" filepath="$PROJECT_DIR$/jt-web/jt-web.iml" />
     </modules>
   </component>
 </project>

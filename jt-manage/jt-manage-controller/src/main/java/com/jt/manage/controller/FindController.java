@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jt.manage.service.ItemService;
+import com.jt.web.service.ItemService;
 
 //测试通用Mapper的工具
 @Controller

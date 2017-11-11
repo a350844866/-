@@ -1,6 +1,5 @@
 package com.jt.manage.controller;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.jt.common.vo.EasyUIResult;
 import com.jt.common.vo.SysResult;
 import com.jt.manage.pojo.Item;
-import com.jt.manage.service.ItemService;
+import com.jt.web.service.ItemService;
 
 @Controller
 @RequestMapping("/item")

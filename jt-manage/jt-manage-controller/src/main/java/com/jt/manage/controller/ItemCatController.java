@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jt.manage.pojo.ItemCat;
-import com.jt.manage.service.ItemCatService;
-import com.jt.manage.service.ItemService;
+import com.jt.web.service.ItemCatService;
 
 @Controller
 @RequestMapping("/item/cat")

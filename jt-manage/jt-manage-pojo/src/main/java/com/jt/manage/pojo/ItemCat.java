@@ -5,13 +5,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.jt.common.po.BasePojo;
 
 
 //商品分类对象
 @Table(name="tb_item_cat")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemCat extends BasePojo{
-	
+
 	@Id  //主键信息
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;	//表示商品分类Id号
@@ -56,21 +58,18 @@ public class ItemCat extends BasePojo{
 	public void setIsParent(Boolean isParent) {
 		this.isParent = isParent;
 	}
-	
+
 	//为了满足EasyUI树形结构 添加get方法
 	public String getText(){
 		return name;
 	}
-	
-	//如果是上级分类菜单"closed"  否则"open"
+
+    //如果是上级分类菜单"closed"  否则"open"
 	//state: 节点状态,“open”或“closed”。
-	public String getState(){ 
-		
+    public String getState() {
+
 		return isParent ? "closed" : "open";
 	}
-	
-	
-	
-	
-	
+
+
 }
