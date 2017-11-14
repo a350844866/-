@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jt-order:war">
+    <output-path>$PROJECT_DIR$/jt-order/target</output-path>
+    <root id="archive" name="jt-order.war">
+      <element id="artifact" artifact-name="jt-order:war exploded" />
+    </root>
+  </artifact>
+</component>

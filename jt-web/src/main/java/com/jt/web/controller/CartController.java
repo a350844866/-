@@ -4,6 +4,7 @@ import com.jt.common.util.CookieUtils;
 import com.jt.common.vo.SysResult;
 import com.jt.web.pojo.Cart;
 import com.jt.web.service.CartService;
+import com.jt.web.util.UserThreadLocal;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +27,7 @@ public class CartController {
     public String toCart(Model model) {
 
         //自定义userId 后期修改
-        Long userId = 2L;
+        Long userId = UserThreadLocal.getUser().getId();//从缓存中获取用户数据
         List<Cart> cartList = cartService.findCartListByUserId(userId);
         model.addAttribute("cartList", cartList);
         //表示转向购物车页面
@@ -41,7 +42,7 @@ public class CartController {
          * 如果需要对返回值进行进一步的操作,可能由于方法的原因造成程序异常终止,需要再次try-catch
          */
         try {
-            Long userId = 2L;
+            Long userId = UserThreadLocal.getUser().getId();//从缓存中获取用户数据
             SysResult sysResult = cartService.updateCartNum(userId, itemId, num);
             return sysResult;
         } catch (Exception e) {
@@ -53,7 +54,7 @@ public class CartController {
 
     @RequestMapping("/delete/{itemId}")
     public String deleteCart(@PathVariable Long itemId) {
-        Long userId = 2L;
+        Long userId = UserThreadLocal.getUser().getId();//从缓存中获取用户数据
         cartService.deleteCart(userId, itemId);
 
         //应该转向到购物车页面
@@ -63,7 +64,7 @@ public class CartController {
     @RequestMapping("/add/{itemId}")
     public String insertCart(@PathVariable Long itemId, Cart cart) {
         //TODO
-        cart.setUserId(2L);
+        cart.setUserId(UserThreadLocal.getUser().getId());
         cart.setItemId(itemId);
 
         cartService.insertCart(cart);

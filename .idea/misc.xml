@@ -6,6 +6,7 @@
     <file type="web" url="file://$PROJECT_DIR$/jt-manage/jt-manage-mapper" />
     <file type="web" url="file://$PROJECT_DIR$/jt-manage/jt-manage-pojo" />
     <file type="web" url="file://$PROJECT_DIR$/jt-manage/jt-manage-service" />
+    <file type="web" url="file://$PROJECT_DIR$/jt-order" />
     <file type="web" url="file://$PROJECT_DIR$/jt-sso" />
     <file type="web" url="file://$PROJECT_DIR$/jt-web" />
   </component>

@@ -83,7 +83,7 @@ public class CartServiceImpl implements CartService {
         //定义url
         String url = "http://cart.jt.com/cart/query/" + userId;
         try {
-            String sysResultJSOn = httpClientService.doGet(url);
+            String sysResultJSOn = httpClientService.doGet(url, "utf-8");
 
             JsonNode jsonNode = objectMapper.readTree(sysResultJSOn);
             //返回的是JSON串 [{},{},{}] 获取JSON串中的数据

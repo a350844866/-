@@ -25,4 +25,25 @@
 
     <!-- 处理静态资源被“/”所拦截的问题 -->
     <mvc:default-servlet-handler/>
+
+    <!--定义拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--定义拦截路径 表示只对购物车生效-->
+            <mvc:mapping path="/cart/**"/>
+
+            <!--表示除了这些之外拦截-->
+            <!--<mvc:exclude-mapping path="/login"/>-->
+            <!--<mvc:exclude-mapping path="/logout"/>-->
+            <bean class="com.jt.web.intercept.WebInterceptor"></bean>
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/order/**"/>
+            <bean class="com.jt.web.intercept.WebInterceptor"></bean>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+
 </beans>
