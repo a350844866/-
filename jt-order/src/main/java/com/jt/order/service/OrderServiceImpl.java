@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jt.order.mapper.OrderMapper;
 import com.jt.order.pojo.Order;
 import org.apache.log4j.Logger;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sun.rmi.runtime.Log;
@@ -20,6 +21,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private OrderMapper orderMapper;
+
+    //注入rabbitMQ对象信息
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
 
     @Override
     public Order findOrderById(String orderId) {
@@ -40,7 +46,11 @@ public class OrderServiceImpl implements OrderService {
             order.setUpdateTime(order.getCreateTime());
             order.getOrderShipping().setCreated(order.getCreateTime());
             order.getOrderShipping().setUpdated(order.getCreateTime());
-            orderMapper.saveOrder(order);
+
+//            orderMapper.saveOrder(order);
+            //通过rabbitMQ的机制实现 该消息指定发送的内容
+            rabbitTemplate.convertAndSend("saveOrder", order);
+
             return orderId;
         } catch (Exception e) {
             e.printStackTrace();

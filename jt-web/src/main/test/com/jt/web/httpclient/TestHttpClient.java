@@ -19,43 +19,43 @@ public class TestHttpClient {
      * 4.发起http请求
      * 5.获取响应结果
      */
-    @Test
-    public void test01() throws IOException {
-        //定义http请求对象
-        CloseableHttpClient httpClient = HttpClients.createDefault();
-
-        //定义url
-        String url = "http://tmooc.cn/web/index_new.html?tedu";
-
-        //定义请求方式
-        HttpGet httpGet = new HttpGet(url);
-
-        //发起请求
-        CloseableHttpResponse response = httpClient.execute(httpGet);
-
-        if (response.getStatusLine().getStatusCode() == 200) {
-            System.out.println("恭喜您请求发送正确");
-            String html = EntityUtils.toString(response.getEntity(), "UTF-8");
-            System.out.println(html);
-
-        } else {
-            System.out.println("请求失败");
-        }
-    }
-
-
-    @Test
-    public void testPost() throws IOException {
-        CloseableHttpClient client = HttpClients.createDefault();
-        String url = "http://tmooc.cn/web/index_new.html?tedu";
-        HttpPost post = new HttpPost(url);
-
-        CloseableHttpResponse response = client.execute(post);
-
-        String html = EntityUtils.toString(response.getEntity());
-        System.out.println(html);
-
-
-    }
-
+//    //@Test
+//    public void test01() throws IOException {
+//        //定义http请求对象
+//        CloseableHttpClient httpClient = HttpClients.createDefault();
+//
+//        //定义url
+//        String url = "http://tmooc.cn/web/index_new.html?tedu";
+//
+//        //定义请求方式
+//        HttpGet httpGet = new HttpGet(url);
+//
+//        //发起请求
+//        CloseableHttpResponse response = httpClient.execute(httpGet);
+//
+//        if (response.getStatusLine().getStatusCode() == 200) {
+//            System.out.println("恭喜您请求发送正确");
+//            String html = EntityUtils.toString(response.getEntity(), "UTF-8");
+//            System.out.println(html);
+//
+//        } else {
+//            System.out.println("请求失败");
+//        }
+//    }
+//
+//
+//    //@Test
+//    public void testPost() throws IOException {
+//        CloseableHttpClient client = HttpClients.createDefault();
+//        String url = "http://tmooc.cn/web/index_new.html?tedu";
+//        HttpPost post = new HttpPost(url);
+//
+//        CloseableHttpResponse response = client.execute(post);
+//
+//        String html = EntityUtils.toString(response.getEntity());
+//        System.out.println(html);
+//
+//
+//    }
+//
 }
