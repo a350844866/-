@@ -20,7 +20,7 @@
     <rabbit:admin connection-factory="connectionFactory"/>
 
     <!-- 定义交换器，自动声明,durable持久化 -->
-    <rabbit:direct-exchange name="save.orer" auto-declare="true" durable="true">
+    <rabbit:direct-exchange name="save.order" auto-declare="true" durable="true">
     </rabbit:direct-exchange>
 
 </beans>

@@ -1,7 +1,9 @@
 package com.jt.order.pojo;
 
+import java.io.Serializable;
+
 //订单下的商品信息
-public class OrderItem {
+public class OrderItem implements Serializable {
     private String itemId;//商品号
     private String orderId;//订单号
     private Integer num; //商品数量

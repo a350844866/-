@@ -1,11 +1,13 @@
 package com.jt.web.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.jt.common.po.BasePojo;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Item extends BasePojo {
     private Long id;  //商品的编号
     private String title; //商品的标题
