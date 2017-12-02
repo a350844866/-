@@ -17,7 +17,7 @@ public class ItemController {
     public String saveItem() {
         itemService.saveItem();
         System.out.println("成功");
-        return "成功";
+        return "success";
     }
 
 

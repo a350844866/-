@@ -23,7 +23,7 @@
     <bytecodeTargetLevel target="1.7">
       <module name="jt-cart" target="1.5" />
       <module name="jt-common" target="1.6" />
-      <module name="jt-jsoup" target="1.5" />
+      <module name="jt-jsoup" target="1.6" />
       <module name="jt-manage" target="1.5" />
       <module name="jt-manage-controller" target="1.5" />
       <module name="jt-manage-mapper" target="1.5" />
@@ -32,7 +32,7 @@
       <module name="jt-order" target="1.6" />
       <module name="jt-parent" target="1.5" />
       <module name="jt-search" target="1.5" />
-      <module name="jt-sso" target="1.5" />
+      <module name="jt-sso" target="1.6" />
       <module name="jt-web" target="1.7" />
       <module name="shoppingmall" target="1.5" />
     </bytecodeTargetLevel>
